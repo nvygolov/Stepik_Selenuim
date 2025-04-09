@@ -62,3 +62,6 @@ class BasePage:
                 print("No second alert presented")
         except NoAlertPresentException:
             print("No alert present, skipping quiz solving")
+    def go_to_login_page(self):
+        login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        login_link.click()
